@@ -1,0 +1,6 @@
+﻿  1753141_Ex06.cpp
+  Student.cpp
+  StudentArray.cpp
+  Generating Code...
+  C:\Users\minhduc\Desktop\1753141_W02_06\BaiTap6\1753141_Ex06.cpp(33) : warning C4715: 'loadStudent': not all control paths return a value
+  BaiTap6.vcxproj -> C:\Users\minhduc\Desktop\1753141_W02_06\Debug\BaiTap6.exe
