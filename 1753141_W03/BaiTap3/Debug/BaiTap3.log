@@ -1,0 +1,8 @@
+﻿  1753141_Ex3.cpp
+  Point.cpp
+  Triangle.cpp
+  TrigangleArray.cpp
+  Generating Code...
+C:\Users\minhduc\Desktop\1753141_W02_06\BaiTap3\Triangle.cpp(11,23): warning C4805:  '==': unsafe mix of type 'bool' and type 'double' in operation
+C:\Users\minhduc\Desktop\1753141_W02_06\BaiTap3\Triangle.cpp(11,23): warning C4805: C:\Users\minhduc\Desktop\1753141_W02_06\BaiTap3\1753141_Ex3.cpp(24) : warning C4715: 'loadArray': not all control paths return a value
+  BaiTap3.vcxproj -> C:\Users\minhduc\Desktop\1753141_W02_06\Debug\BaiTap3.exe
