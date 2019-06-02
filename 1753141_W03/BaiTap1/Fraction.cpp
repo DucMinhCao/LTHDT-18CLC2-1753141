@@ -10,7 +10,7 @@ Fraction::Fraction()
 Fraction::Fraction(int a, int b)
 {
 	this->numerator = a;
-	if (b == 0) {
+	if (b == 0 && a != 0) {
 		cout << "Mau so khong the bang 0";
 	}
 	else {
@@ -29,9 +29,9 @@ Fraction::~Fraction()
 }
 
 void Fraction::Input() {
-	cout << "Input numerator : " << endl;
+	cout << "Nhap tu so : " << endl;
 	cin >> numerator;
-	cout << "Input denominator : " << endl;
+	cout << "Nhap mau so : " << endl;
 	cin >> denominator;
 }
 
@@ -44,11 +44,11 @@ int Fraction::GetDenominator() {
 }
 
 void Fraction::SetDenominator(int denominator) {
-	denominator = denominator;
+	this->denominator = denominator;
 }
 
 void Fraction::SetNumerator(int numerator) {
-	numerator = numerator;
+	this->numerator = numerator;
 }
 
 int Fraction::Gcd(int a, int b) {
@@ -70,14 +70,14 @@ void Fraction::Output() {
 bool Fraction::Compare(Fraction ps) {
 	int a = this->numerator;
 	int b = this->denominator;
-	int gcd = Gcd(a, b);
-	a /= gcd;
-	b /= gcd;
+	int rutgon = Gcd(a, b);
+	a /= rutgon;
+	b /= rutgon;
 	int c = ps.numerator;
 	int d = ps.denominator;
-	int gcd2 = Gcd(c, d);
-	c /= gcd2;
-	d / gcd2;
+	int rutgon2 = Gcd(c, d);
+	c /= rutgon2;
+	d /= rutgon2;
 
 	int compare = a * d - b * c;
 

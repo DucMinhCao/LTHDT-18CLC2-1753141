@@ -1,24 +1,25 @@
 #pragma once
 #include <iostream>
-#include "PhanSo.h"
+#include <fstream>
+#include "Fraction.h"
 using namespace std;
 
-class MangPhanSo
+class FractionArray
 {
 private:
 	int n;
-	PhanSo* phanSo;
+	Fraction* Fraction;
 public:
-	MangPhanSo();
-	MangPhanSo(int& n, PhanSo* ps);
-	MangPhanSo(const MangPhanSo &phanSo);
-	~MangPhanSo();
-	void input();
-	void display();
-	PhanSo findsum();
-	PhanSo findmax();
-	PhanSo findmin();
-	void sort();
-	
+	FractionArray();
+	FractionArray(int& n, Fraction* ps);
+	FractionArray(const FractionArray &Fraction);
+	~FractionArray();
+	void Input();
+	void Display();
+	Fraction FindSum();
+	Fraction FindMax();
+	Fraction FindMin();
+	void Sort();
+	bool LoadFractionArray(const char* path, Fraction*& a, int &n);
 };
 

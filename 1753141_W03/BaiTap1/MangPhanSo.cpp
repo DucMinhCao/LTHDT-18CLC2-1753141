@@ -1,81 +1,106 @@
-#include "MangPhanSo.h"
+#include "FractionArray.h"
 
 
-MangPhanSo::MangPhanSo()
+FractionArray::FractionArray()
 {
 	this->n = 0;
-	this->phanSo = NULL;
+	this->Fraction = NULL;
 }
 
-MangPhanSo::MangPhanSo(int& n, PhanSo* ps)
+FractionArray::FractionArray(int& n, Fraction* ps)
 {
 	this->n = n;
-	this->phanSo = ps;
+	this->Fraction = ps;
 }
 
-MangPhanSo::MangPhanSo(const MangPhanSo &phanSo)
+FractionArray::FractionArray(const FractionArray &Fraction)
 {
-	this->n = phanSo.n;
-	this->phanSo = new PhanSo[n];
+	this->n = Fraction.n;
+	this->Fraction = new Fraction[n];
 	for (int i = 0; i < n; i++) {
-		this->phanSo[i] = phanSo.phanSo[i];
+		this->Fraction[i] = Fraction.Fraction[i];
 	}
 }
 
-MangPhanSo::~MangPhanSo()
+FractionArray::~FractionArray()
 {
 }
 
-void MangPhanSo::input() {
-	phanSo = new PhanSo[n];
+void FractionArray::input() {
+	Fraction = new Fraction[n];
 	for (int i = 0; i < n; i++) {
-		phanSo[i].input();
+		Fraction[i].input();
 	}
 }
 
-void MangPhanSo::display() {
+void FractionArray::display() {
 	for (int i = 0; i < n; i++) {
-		cout << phanSo[i].getTu() << "/" << phanSo[i].getMau() << endl;
+		cout << Fraction[i].getTu() << "/" << Fraction[i].getMau() << endl;
 	}
 }
 
-PhanSo MangPhanSo::findsum() {
-	PhanSo sum;
+Fraction FractionArray::findsum() {
+	Fraction sum;
 	sum.setTu(0);
 	sum.setMau(0);
 
 	for (int i = 0; i < n; i++) {
-		sum = sum.add(phanSo[i]);
+		sum = sum.add(Fraction[i]);
 	}
 	return sum;
 }
 
-PhanSo MangPhanSo::findmax() {
-	PhanSo max = phanSo[0];
+Fraction FractionArray::findmax() {
+	Fraction max = Fraction[0];
 	for (int i = 0; i < n; i++) {
-		if (phanSo[i].soSanh(max)) {
-			max = phanSo[i];
+		if (Fraction[i].soSanh(max)) {
+			max = Fraction[i];
 		}
 	}
 	return max;
 }
 
-PhanSo MangPhanSo::findmin() {
-	PhanSo min = phanSo[0];
+Fraction FractionArray::findmin() {
+	Fraction min = Fraction[0];
 	for (int i = 0; i < n; i++) {
-		if (phanSo[i].soSanh(min) == 0) {
-			min = phanSo[i];
+		if (Fraction[i].soSanh(min) == 0) {
+			min = Fraction[i];
 		}
 	}
 	return min;
 }
 
-void MangPhanSo::sort() {
+void FractionArray::sort() {
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - i - 1; j++) {
-			if (phanSo[j].soSanh(phanSo[j + 1])) {
-				phanSo[j].swap(phanSo[j + 1]);
+			if (Fraction[j].soSanh(Fraction[j + 1])) {
+				Fraction[j].swap(Fraction[j + 1]);
 			}
 		}
 	}
+}
+
+bool FractionArray::loadFractionArray(const char* path, Fraction*& a, int &n)
+{
+	ifstream fin;
+	fin.open(path);
+	if (fin.is_open() == false) {
+		return false;
+	}
+	fin >> n;
+	a = new Fraction[n];
+	int numerator = 0;
+	int denominator = 0;
+	for (int i = 0; i < n; i++) {
+		fin >> numerator;
+		fin >> denominator;
+		a[i].setTu(numerator);
+		a[i].setMau(denominator);
+	}
+
+	this->n = n;
+	this->Fraction = a;
+	fin.close();
+	return true;
+
 }

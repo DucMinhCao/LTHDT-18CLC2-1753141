@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PhanSo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MangPhanSo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="1753141_Ex01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FractionArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PhanSo.h">
+    <ClInclude Include="Fraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MangPhanSo.h">
+    <ClInclude Include="FractionArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
