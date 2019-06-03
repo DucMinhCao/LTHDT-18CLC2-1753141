@@ -1,0 +1,6 @@
+﻿  1753141_Ex01.cpp
+  MangPhanSo.cpp
+  PhanSo.cpp
+  Generating Code...
+C:\Users\minhduc\Desktop\1753141_W02_06\BaiTap1\PhanSo.cpp(53,4): warning C4552:  '/': result of expression not used
+  BaiTap1.vcxproj -> C:\Users\minhduc\Desktop\1753141_W02_06\Debug\BaiTap1.exe
