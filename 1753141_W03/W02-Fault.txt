@@ -1,0 +1,5 @@
+﻿Mở File Nhưng Không Đóng File
+Xuất ra màn hình bên trong hàm của đối tượng
+Đặt chung cài đặt và định nghĩa của lớp trong file .h
+Hàm của đối tượng không có kết quả trả về
+Hàm nằm bên ngoài lớp 
